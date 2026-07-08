@@ -1,18 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import About from "../components/About";
-import "../styles/global.css";
+import BookingForm from "../components/BookingForm";
 
-function AboutPage() {
+function BookingPage() {
   return (
     <>
       <Navbar />
       <div style={{ minHeight: "100vh", paddingTop: "90px" }}>
-        <About />
+        <BookingForm />
       </div>
       <Footer />
     </>
   );
 }
 
-export default AboutPage;
+export default BookingPage;

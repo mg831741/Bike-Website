@@ -1,0 +1,247 @@
+/* feedbackPage.css */
+
+.feedback-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.feedback-card {
+  background: rgba(30, 30, 35, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 50px;
+  transition: all 0.4s ease;
+}
+
+.feedback-card h2 {
+  font-size: 32px;
+  color: #ff3c00;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.feedback-subtitle {
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-row-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-field label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.form-group-field input,
+.form-group-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(20, 20, 25, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group-field input:focus,
+.form-group-field textarea:focus {
+  outline: none;
+  border-color: #ff3c00;
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.35);
+  background: rgba(30, 30, 35, 0.8);
+}
+
+/* Star Rating Selector */
+.rating-select-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.rating-select-group label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+  font-weight: 600;
+}
+
+.stars-selector-row {
+  display: flex;
+  gap: 10px;
+}
+
+.star-btn {
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.15);
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.star-btn.active {
+  color: #ff3c00;
+  text-shadow: 0 0 15px rgba(255, 60, 0, 0.8);
+  transform: scale(1.15);
+}
+
+.star-btn:hover {
+  transform: scale(1.25);
+  color: #ffaa00;
+}
+
+.feedback-submit-btn {
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #ff3c00;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 60, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.feedback-submit-btn:hover {
+  background: #ff5500;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 60, 0, 0.5);
+}
+
+/* Reviews Feed */
+.reviews-feed-container {
+  width: 100%;
+  max-width: 650px;
+  text-align: left;
+}
+
+.reviews-feed-container h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 10px;
+}
+
+.feedback-feed-item {
+  background: rgba(30, 30, 35, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: slideInFeed 0.5s ease-out;
+}
+
+@keyframes slideInFeed {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-feed-item:hover {
+  border-color: rgba(255, 60, 0, 0.25);
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(255, 60, 0, 0.08);
+}
+
+.feed-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.feed-user-info h4 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.feed-user-info .bike-label {
+  font-size: 13px;
+  color: #ff8c00;
+  font-weight: 500;
+}
+
+.feed-stars {
+  color: #ff3c00;
+  font-size: 18px;
+  text-shadow: 0 0 8px rgba(255, 60, 0, 0.4);
+}
+
+.feed-comment {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.feed-date {
+  font-size: 11px;
+  color: #666;
+  text-align: right;
+  margin-top: 10px;
+}

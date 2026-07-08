@@ -1,21 +1,15 @@
 import Navbar from "../components/Navbar";
-import Services from "../components/Services";
 import Footer from "../components/Footer";
+import Services from "../components/Services";
 
 function ServicesPage() {
   return (
     <>
-
       <Navbar />
-
-      <div className="page-banner">
-        <h1>Our Services</h1>
+      <div style={{ minHeight: "100vh", paddingTop: "90px" }}>
+        <Services />
       </div>
-
-      <Services />
-
       <Footer />
-
     </>
   );
 }

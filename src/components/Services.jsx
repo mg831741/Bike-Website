@@ -1,4 +1,5 @@
 import servicesData from "../data/servicesData";
+import "../styles/services.css";
 
 function Services() {
 

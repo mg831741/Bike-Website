@@ -1,21 +1,15 @@
 import Navbar from "../components/Navbar";
-import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 function ContactPage() {
   return (
     <>
-
       <Navbar />
-
-      <div className="page-banner">
-        <h1>Contact Us</h1>
+      <div style={{ minHeight: "100vh", paddingTop: "90px" }}>
+        <Contact />
       </div>
-
-      <Contact />
-
       <Footer />
-
     </>
   );
 }

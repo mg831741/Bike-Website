@@ -1,61 +1,31 @@
 // galleryData.js
 
 const galleryData = [
-
   {
     id: 1,
-
-    image:
-      "https://images.unsplash.com/photo-1558981806-ec527fa84c39",
-
-    title: "Sports Bike",
+    image: "/image/gallery_1.jpg",
+    title: "MG Garage Workshop"
   },
-
   {
     id: 2,
-
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
-
-    title: "Bike Workshop",
+    image: "/image/gallery_2.jpg",
+    title: "Custom Bike Fabrication"
   },
-
   {
     id: 3,
-
-    image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
-
-    title: "Garage Service",
+    image: "/image/gallery_3.jpg",
+    title: "Professional Bike Wash"
   },
-
   {
     id: 4,
-
-    image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c",
-
-    title: "Racing Bike",
+    image: "/image/gallery_4.jpg",
+    title: "Engine Service & Repair"
   },
-
   {
     id: 5,
-
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-
-    title: "Bike Modification",
-  },
-
-  {
-    id: 6,
-
-    image:
-      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d",
-
-    title: "Custom Garage",
-  },
-
+    image: "/image/gallery_5.jpg",
+    title: "Custom Modifications & Tuning"
+  }
 ];
 
 export default galleryData;

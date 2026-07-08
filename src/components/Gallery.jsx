@@ -1,3 +1,6 @@
+import "../styles/gallery.css";
+import galleryData from "../data/galleryData";
+
 function Gallery() {
   return (
     <section className="gallery" id="gallery">
@@ -6,11 +9,9 @@ function Gallery() {
 
       <div className="gallery-grid">
 
-        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39" />
-
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" />
-
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" />
+        {galleryData.map((item) => (
+          <img key={item.id} src={item.image} alt={item.title} />
+        ))}
 
       </div>
 

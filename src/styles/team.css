@@ -1,0 +1,270 @@
+/* team.css */
+
+.team {
+  padding: 80px 8%;
+  background: transparent;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ff3c00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.team-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card {
+  background: rgba(30, 30, 35, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 60, 0, 0.4);
+  box-shadow: 0 15px 40px rgba(255, 60, 0, 0.15);
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff3c00, #ff8c00);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+/* Profile Image */
+.profile-img-wrapper {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 60, 0, 0.5);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.profile-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .profile-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.team-card:hover .profile-img-wrapper {
+  border-color: #ff3c00;
+  box-shadow: 0 0 25px rgba(255, 60, 0, 0.4);
+}
+
+/* Owner Spotlight Card */
+.owner-card-container {
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.owner-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  text-align: left;
+  align-items: center;
+}
+
+.owner-card .profile-img-wrapper {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.owner-info {
+  flex-grow: 1;
+}
+
+.owner-tag {
+  display: inline-block;
+  background: #ff3c00;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.owner-info h3 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.owner-info .role {
+  font-size: 16px;
+  color: #ff3c00;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.owner-info .bio {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Employees Grid */
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.employee-card .profile-img-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.employee-card .profile-img-wrapper {
+  width: 140px;
+  height: 140px;
+}
+
+/* Floating role badge — sits at the right side of the photo */
+.profile-role-badge {
+  position: absolute;
+  bottom: 6px;
+  right: -18px;
+  background: linear-gradient(135deg, #ff3c00, #ff8c00);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(255, 60, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.employee-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.employee-card .role {
+  font-size: 15px;
+  color: #ff3c00;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.employee-card .bio {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Badges & Experience */
+.exp-badge {
+  font-size: 13px;
+  color: #aaa;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.employee-card .specialties {
+  justify-content: center;
+}
+
+.owner-card .specialties {
+  justify-content: flex-start;
+}
+
+.specialty-tag {
+  background: rgba(255, 60, 0, 0.1);
+  color: #ff8c00;
+  border: 1px solid rgba(255, 60, 0, 0.2);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .specialty-tag {
+  border-color: rgba(255, 60, 0, 0.4);
+  background: rgba(255, 60, 0, 0.15);
+  color: #ff3c00;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .owner-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .owner-card .profile-img-wrapper {
+    margin: 0 auto 10px;
+  }
+
+  .owner-card .specialties {
+    justify-content: center;
+  }
+  
+  .team-card {
+    padding: 30px 20px;
+  }
+}

@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
 }
 
 body{
-  background:#0f0f0f;
+  background:transparent;
   color:white;
 }
 
@@ -82,10 +89,22 @@ body{
 }
 
 .card{
-  background:#1c1c1c;
+  background:rgba(30, 30, 35, 0.45);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.06);
   padding:40px;
   text-align:center;
-  border-radius:10px;
+  border-radius:15px;
+  box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  background: rgba(255, 60, 0, 0.12);
+  border-color: rgba(255, 60, 0, 0.5);
+  box-shadow: 0 15px 45px rgba(255, 60, 0, 0.2);
 }
 
 .gallery-grid img{
@@ -96,10 +115,21 @@ body{
 }
 
 .review{
-  background:#1c1c1c;
+  background:rgba(30, 30, 35, 0.45);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.06);
   padding:30px;
   margin-top:20px;
-  border-radius:10px;
+  border-radius:15px;
+  box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  transition:all 0.3s ease;
+}
+
+.review:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255, 60, 0, 0.3);
+  box-shadow:0 12px 40px 0 rgba(255, 60, 0, 0.1);
 }
 
 .footer{
@@ -116,4 +146,32 @@ body{
 
 #root{
   width:100%;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff3c00;
+  color: white;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 60, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: white;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
 }

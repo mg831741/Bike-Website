@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
 function Navbar() {
@@ -7,44 +8,55 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-
-        <img
-          src="/images/logo.png"
-          alt="logo"
-        />
-
-        <h1>BIKE GARAGE</h1>
-
+        <Link to="/">
+          <img
+            src="/image/logo.png"
+            alt="MG Garage Logo"
+            className="logo-img"
+          />
+        </Link>
       </div>
 
       <ul>
 
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
 
         <li>
-          <a href="#services">
-            Services
-          </a>
+          <Link to="/about">About</Link>
         </li>
 
         <li>
-          <a href="#gallery">
-            Gallery
-          </a>
+          <Link to="/services">Services</Link>
         </li>
 
         <li>
-          <a href="#contact">
-            Contact
-          </a>
+          <Link to="/gallery">Gallery</Link>
         </li>
 
         <li>
-          <a href="#booking">
-            Booking
-          </a>
+          <Link to="/team">Team</Link>
+        </li>
+
+        <li>
+          <Link to="/ai-customizer">AI Customizer</Link>
+        </li>
+
+        <li>
+          <Link to="/booking">Booking</Link>
+        </li>
+
+        <li>
+          <Link to="/feedback">Feedback</Link>
+        </li>
+
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+
+        <li>
+          <Link to="/login" className="nav-login-btn">Login</Link>
         </li>
 
       </ul>

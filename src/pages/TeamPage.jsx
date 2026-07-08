@@ -1,18 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import About from "../components/About";
-import "../styles/global.css";
+import Team from "../components/Team";
 
-function AboutPage() {
+function TeamPage() {
   return (
     <>
       <Navbar />
       <div style={{ minHeight: "100vh", paddingTop: "90px" }}>
-        <About />
+        <Team />
       </div>
       <Footer />
     </>
   );
 }
 
-export default AboutPage;
+export default TeamPage;

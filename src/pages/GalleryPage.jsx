@@ -1,21 +1,15 @@
 import Navbar from "../components/Navbar";
-import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
 
 function GalleryPage() {
   return (
     <>
-
       <Navbar />
-
-      <div className="page-banner">
-        <h1>Garage Gallery</h1>
+      <div style={{ minHeight: "100vh", paddingTop: "90px" }}>
+        <Gallery />
       </div>
-
-      <Gallery />
-
       <Footer />
-
     </>
   );
 }

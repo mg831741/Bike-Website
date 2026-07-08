@@ -1,0 +1,74 @@
+.booking {
+  padding: 80px 8%;
+  background: transparent;
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #ff3c00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(30, 30, 35, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #ff3c00;
+  box-shadow: 0 0 8px rgba(255, 60, 0, 0.4);
+  background: #333;
+}
+
+.booking-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff3c00;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.booking-form select option {
+  background: #1c1c1c;
+  color: white;
+}
